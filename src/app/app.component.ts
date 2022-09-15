@@ -21,7 +21,7 @@ export class AppComponent {
   set appShark(directive: CardHoverDirective) {
     this.extraCreature = directive.creature;
   }
-
+  @ViewChild(CardHoverDirective) dir!:CardHoverDirective;
   // Using ViewChild with Child Components
   @ViewChild(PupComponent) pup!: PupComponent;
 
@@ -29,5 +29,6 @@ export class AppComponent {
     this.someInput.nativeElement.value = 'Whale!';
     console.log(this.extraCreature); // Dolphin
     console.log(this.pup.whoAmI()); // I am a pup component!
+    console.log(this.dir.creature);// Dolphin
   }
 }

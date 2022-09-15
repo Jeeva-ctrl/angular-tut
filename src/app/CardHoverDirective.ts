@@ -6,6 +6,8 @@ import {
   HostBinding,
 } from '@angular/core';
 
+// HostBinding - to set host element custom proprties and HostListener - for event action
+
 @Directive({
   selector: '[ccCardHover]',
 })
